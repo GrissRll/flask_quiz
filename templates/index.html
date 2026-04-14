@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<header>
+
+</header>
+<body>
+    <form method="POST", action="/">
+        <select name="quiz_list" id="quiz_select">
+            {% for quiz in quiz_list%}
+                <option value="{{ quiz[0] }}">{{ quiz[1] }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Выбрать квиз!">
+    </form>
+    
+</body>
+
+<footer>
+
+</footer>
+</html>
