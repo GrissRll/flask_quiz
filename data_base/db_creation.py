@@ -12,5 +12,7 @@ def create_db(db):
 
     #ADD DATA INTO TABLES
     db.insert_data(INS_QUIZ, quiz_names, False)
+    db.insert_data(INS_QUEST, memes_question, False)
+    db.insert_data(INST_QC, link_list, False)
 
 

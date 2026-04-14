@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 from data_base.db import DataBase
-from data_base.querys import SL_ALL_QUIZ
+from data_base.querys import SL_ALL_QUIZ, SL_QUESTION
 import os
 
 DATABASE = "/flask_quiz/quiz_data.db"
@@ -19,11 +19,13 @@ def index():
     quiz = db.get_data(SL_ALL_QUIZ)
     if request.method == "POST":
         session["quiz_id"] = request.form.get("quiz_list")
+        session["question_list"] = db.get_data(SL_QUESTION, session["quiz_id"])
         return redirect(url_for("test"))
     return render_template("index.html", quiz_list=quiz, title="ТОП ВИКТОРИНЫ!")
 
 @app.route("/test", methods=["GET", "POST"])
 def test():
+    print(session["question_list"])
     return "test page"
 
 if __name__ == '__main__':

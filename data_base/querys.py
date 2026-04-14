@@ -37,6 +37,15 @@ SL_ALL_QUIZ = """
     SELECT * FROM quiz
 """
 
+SL_QUESTION = """
+    SELECT question, answer, wrong1, wrong2, wrong3 FROM question, quiz_content
+    WHERE quiz_content.quiz_id == ?
+    AND question.id == quiz_content.question_id
+"""
+
+
+
+
 INS_QUIZ = """
     INSERT INTO quiz(name) VALUES(?)
 """
