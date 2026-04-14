@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ОТВЕЧАЙ!</title>
+</head>
+<body>
+    <main>
+        <h1>{{ question }}</h1>
+        <form action="/test" method="POST">
+            {% for variant in q_list %}
+                <input type="radio" name="answer" value="{{ variant }}"> {{ variant }}
+            {% endfor %}
+            <input type="submit">
+        </form>
+        
+    </main>
+</body>
+</html>
