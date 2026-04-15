@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.ttf");
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.greating {
+    color: rgb(43, 40, 40);
+    text-align: center;
+    padding-top: 5%;
+}
+
+
+.forma {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.btn_input {
+    margin-top: 5%;
+    width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    border-width: 1px;
+    background: rgb(216, 113, 113);
+}
+
+.btn_input:hover {
+    background: rgb(114, 44, 44);
+    transition: 0.2s;
+}
+
+.btn_input::after{
+    margin: 1px 1px;
+    transition: 0.2s;
+}
+
+select {
+    text-align: center;
+    width: 300px;
+    height: 150px;
+}
+
+option {
+    font-size: 18px;
+}
+
+select {
+    font-size: 18px;
+    border-radius: 8px;
+    -webkit-appearance: none; 
+    -moz-appearance: none;   
+    appearance: none;
+
+    padding-right: 0;
+}
+
+option:checked {
+    color: white;
+    background-color: #c46213; 
+}
+option:hover {
+    color: white;
+    background-color: #c2951b; 
+}
+
+
+
+
+

@@ -21,6 +21,7 @@ def index():
         session["q_num"] = 1
         session["user_answers"] = []
     if request.method == "POST":
+        session["q_num"] = 1
         session["quiz_id"] = request.form.get("quiz_list")
         session["question_list"] = db.get_data(SL_QUESTION, session["quiz_id"])
         return redirect(url_for("test"))

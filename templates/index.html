@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
 <header>
 
 </header>
 <body>
-    <form method="POST", action="/">
-        <select name="quiz_list" id="quiz_select">
-            {% for quiz in quiz_list%}
-                <option value="{{ quiz[0] }}">{{ quiz[1] }}</option>
-            {% endfor %}
-        </select>
-        <input type="submit" value="Выбрать квиз!">
-    </form>
-    
+    <h1 class="greating">Добро пожаловать!</h1>
+    <p class="greating">Это мое первое веб-приложение!</p>
+    <div class="forma">
+        <form method="POST", action="/">
+            <select name="quiz_list" id="quiz_select">
+                {% for quiz in quiz_list%}
+                    <option value="{{ quiz[0] }}">{{ quiz[1] }}</option>
+                {% endfor %}
+            </select>
+            <p><input class="btn_input" type="submit" value="Выбрать квиз!"></p>
+        </form>
+    </div>
 </body>
 
 <footer>
