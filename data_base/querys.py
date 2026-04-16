@@ -43,7 +43,11 @@ SL_QUESTION = """
     AND question.id == quiz_content.question_id
 """
 
-
+SL_RIGHT_ANS = """
+    SELECT answer FROM question, quiz_content
+    WHERE quiz_content.quiz_id == ?
+    AND question.id == quiz_content.question_id
+"""
 
 
 INS_QUIZ = """

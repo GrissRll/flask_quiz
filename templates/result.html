@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+</head>
+<body>
+    <div>
+        {% for ans in right_ans %}
+            <p>{{ ans }}</p>
+        {% endfor %}
+    </div>
+
+    <div>
+        {% for ans in wrong_ans %}
+            <p>{{ ans }}</p>
+        {% endfor %}
+    </div>
+    <a href="{{ url_for('index') }}"><button>Главная</button></a>
+
+</body>
+</html>
